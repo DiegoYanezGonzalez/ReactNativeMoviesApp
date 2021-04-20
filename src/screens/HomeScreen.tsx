@@ -31,7 +31,7 @@ export const HomeScreen = () => {
          
          <Carousel 
          data={peliculasEnCine}
-         renderItem={ () => <MoviePoster movie={peliculasEnCine[10]}  />}
+         renderItem={ ( {item }: any ) => <MoviePoster movie={item}/>}
          sliderWidth={windowWidth}
          itemWidth={300}
 
