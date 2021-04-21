@@ -81,10 +81,12 @@ const styles = StyleSheet.create({
         marginTop:15
     },
     subTitle:{
+        marginLeft:5,
         fontSize:16,
         opacity:0.5
     },
     title:{
+        marginLeft:5,
        fontSize:20,
        fontWeight:'bold'
     }
