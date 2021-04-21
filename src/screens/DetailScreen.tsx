@@ -5,6 +5,8 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { Movie } from '../interface/movieInterface';
 import { RootStackParams } from '../navigation/Navigation';
 
+import Icon from 'react-native-vector-icons/Ionicons';
+
 
 const screenHeight = Dimensions.get('screen').height;
 
@@ -18,18 +20,25 @@ export const DetailScreen = ({route}:Props) => {
 
     return (
     <ScrollView>
-
-
-        <View style={styles.imageContainer} >  
-         <Image
-         source={{uri}}
-         style={styles.posterImage}
-         />
+        <View style={styles.imageContainer} > 
+          <View style={styles.imageBorder}>
+             <Image
+              source={{uri}}
+              style={styles.posterImage}
+              />
+          </View> 
         </View>
 
         <View style={styles.marginContainer}>
-        <Text style={styles.subTitle}> {movie.original_title} </Text>
-         <Text style={styles.title}> {movie.title} </Text>
+             <Text style={styles.subTitle}> {movie.original_title} </Text>
+             <Text style={styles.title}> {movie.title} </Text>
+        </View>
+        <View style={styles.marginContainer}>
+             <Icon
+             name='star-outline'
+             color="grey"
+             size={20}
+             />
         </View>
     </ScrollView>
 
@@ -39,7 +48,6 @@ export const DetailScreen = ({route}:Props) => {
 
 const styles = StyleSheet.create({
     imageContainer:{
-        overflow:'hidden',
         width:'100%',
         height:screenHeight * 0.7,
         shadowColor:"#000",
@@ -50,7 +58,12 @@ const styles = StyleSheet.create({
         shadowOpacity:0.25,
         shadowRadius:3.84,
         elevation:10,
-
+        borderBottomEndRadius:25,
+        borderBottomStartRadius:25
+    },
+    imageBorder:{
+        flex:1,
+        overflow:'hidden',
         borderBottomEndRadius:25,
         borderBottomStartRadius:25
     },
