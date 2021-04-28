@@ -2,7 +2,9 @@ import { StackScreenProps } from '@react-navigation/stack';
 import React from 'react';
 import { View, Text, Image, StyleSheet, Dimensions, ActivityIndicator } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import { Movie } from '../interface/movieInterface';
+
+
+
 import { RootStackParams } from '../navigation/Navigation';
 import { useMovieDetails } from '../hooks/useMovieDetails';
 import { MovieDetails } from '../components/MovieDetails';
