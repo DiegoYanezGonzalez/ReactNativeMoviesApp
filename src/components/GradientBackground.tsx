@@ -17,8 +17,8 @@ const {colors} = useContext(GradientContext);
             <LinearGradient
             colors={[colors.primary,colors.secondary,'white']}
             style={{...StyleSheet.absoluteFillObject}}
-            start={{x:0.1,y:0.1}}
-            end={{x:0.5,y:0.5}}
+            start={{x:0.7,y:0.2}}
+            end={{x:0.2,y:0.8}}
             />
             {children}
         </View>
